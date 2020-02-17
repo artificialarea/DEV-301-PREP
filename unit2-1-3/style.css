@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: mintcream;
+}
+
+.wrapper {
+  width: 500px;
+  background-color: steelblue;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+p {
+  text-align: justify;
+  padding: 15px;
+  background-color: cornflowerblue;
+}
+
+.highlighted {
+  background-color: indianred;
+}
+
