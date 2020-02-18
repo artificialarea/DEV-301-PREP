@@ -1,1 +1,21 @@
-/* smthin */
+* {
+  box-sizing: border-box;
+}
+
+/* // for sake of this exercise, will do via jQuery instead
+#important-events h1 {
+  background-color: turquoise;
+}
+*/
+.js-important {
+  background-color: turquoise;
+}
+
+#important-events li {
+  background-color: rgb(155, 196, 229);
+  font-weight: bold;
+}
+
+section > p {
+  background-color: rgb(222, 229, 155);
+}
