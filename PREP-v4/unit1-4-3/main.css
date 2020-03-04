@@ -1,15 +1,78 @@
-body * {
+body * { /* why include body selector? */
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  /* outline: 1px solid red; */
+}
+
+html {
+  background: url('https://tf-assets-prod.s3.amazonaws.com/tf-curric/WEB-DEV-001/2.4.3_the_position_property/outerspace_landscape.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /* background-position: center;  */
+  /* ^^^^ disable, because prefer having it image at 0,0 with the sun always present */
 }
 
 a {
   text-decoration: none;
+  text-transform: lowercase;
+  color: white;
+}
+a:visited {
+  color: white;
 }
 
 .container {
+  position: fixed;
   padding-left: 60px;
   padding-right: 60px;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(0, 0, 0, .6);
+  z-index: 100; /* to ensure this.element overlaps everything else */
 }
 
-/** your styles go here **/
+.container img {
+  float: left;
+  width: 50px;
+  margin-top: 5px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.container ul {
+  float: left;
+  padding: 0; /* note: by default <ul> has padding-left: 40px */
+  margin: 18px 40px;
+  list-style: none;
+}
+
+.container li {
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 16px;
+}
+
+.spacebox {
+  position: relative;
+  width: 600px;
+  height: 300px;
+  border: 10px dotted white;
+  margin: auto;
+  top: 300px;
+}
+
+.animal {
+  position: absolute;
+  width: 200px;
+}
+
+.spacecat {
+left: -100px;
+top: -100px;  
+}
+
+.spacedog {
+right: -100px;
+bottom: -100px;
+}
