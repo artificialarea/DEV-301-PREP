@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  min-width: 250px;
+  padding: 30px;
+}
+
+.hero {
+  height: 200px;
+  margin-bottom: 20px;
+}
