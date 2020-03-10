@@ -3,13 +3,13 @@
 function handleFizzBuzz() {
 
   $('#number-chooser').on('submit', event => {
-    event.preventDefault(); // prevents submission posting
+    // prevent `form` from posting submission, resulting in error
+    event.preventDefault(); 
     
     const numChoice = $(event.currentTarget).find('#number-choice');
     const num = numChoice.val();
     let result;
 
-    // logic of fizzbuzz
     if (num % 3 === 0 && num % 5 === 0) {
       result = 'fizzbuzz';
     } else if (num % 3 === 0) {
@@ -20,9 +20,9 @@ function handleFizzBuzz() {
       result = num;
     }
 
-    console.log(event.target);
-    console.log(num);
-    console.log(result);
+    // console.log(event.target);
+    // console.log(num);
+    // console.log(result);
 
     $('.js-results').html(function() {
       if (result !== num) {
