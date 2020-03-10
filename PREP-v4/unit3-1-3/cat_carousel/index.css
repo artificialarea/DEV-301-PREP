@@ -4,21 +4,20 @@
 }
 
 main {
-  /* min-width: 250px; */
   width: 452px;
-  /* padding: 30px; */
   margin: 0 auto;
-  
 }
 
 .hero img {
   width: 452px;
-  /* height: 200px; 
-  margin-bottom: 4px; */
+  height: 298px;
+  /* overflow: hidden; */
+  object-fit: cover;
+  
 }
 
 .thumbnails {
-  height: 65px;
+  height: 72px;
   /* overflow: hidden; */
   font-size: 0; /* hack to remove gap btw inline-block elements */
 }
@@ -26,7 +25,9 @@ main {
 .thumbnail {
   display: inline-block;
   width: 110px;
+  height: 72px;
   vertical-align: top;
+  object-fit: cover;
   margin-right: 4px;
 }
 
@@ -37,3 +38,11 @@ main {
 .selected-thumbnail {
   border: 3px solid red;
 }
+
+.selected-thumbnail:focus,
+.selected-thumbnail:active {
+  outline: none;
+  /* dunno if it is kosher from an a11y standpoint
+  that I've replaced the outline with visually styled border instead? */
+}
+
