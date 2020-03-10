@@ -14,25 +14,28 @@ main {
 
 .hero img {
   width: 452px;
-  /* height: 200px; */
-  margin-bottom: 20px;
+  /* height: 200px; 
+  margin-bottom: 4px; */
 }
 
 .thumbnails {
   /* height: 200px; */
   height: 65px;
-  overflow: hidden;
+  /* overflow: hidden; */
   font-size: 0; /* hack to remove gap btw inline-block elements */
 }
 
-
-.thumbnail img{
+.thumbnail {
   display: inline-block;
   width: 110px;
   vertical-align: top;
   margin-right: 4px;
 }
 
-.thumbnail:nth-of-type(4) img {
+.thumbnail:nth-of-type(4) {
   margin: 0;
+}
+
+.selected-thumbnail {
+  border: 3px solid red;
 }
