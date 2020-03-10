@@ -32,8 +32,16 @@ function handleCarousel() {
     // update hero image (an alt text) with selected thumbnail image 
     if (!pressedBool) { 
       targetCat.addClass('selected-thumbnail').attr('aria-pressed', !pressedBool);
-      $('.js-hero img').attr('src', targetCat.attr('src'));
-      $('.js-hero img').attr('alt', targetCat.attr('alt'));
+
+      const imgSrc = targetCat.attr('src');
+      const imgAlt = targetCat.attr('alt');
+
+      $('.js-hero img').attr('src', imgSrc).attr('alt', imgAlt);
+
+      // Accomplishes the same as line 39 with only one use off .attr()
+      // by passing it an object with multiple properties.
+      // See: http://api.jquery.com/attr/#attr-attributes
+      // $('.hero img').attr({'src': imgSrc, 'alt': imgAlt});
     }
   });
 }
